@@ -12,7 +12,7 @@ use designetecnologia\main\inception\Model;
  * @author     Elionai Moura <eli.embits@gmail.com>
  * @copyright  2015 Design e Tecnologia by Elionai Moura <http://designetecnologia.com.br>
  * @license    The MIT license <https://opensource.org/licenses/MIT>
- * @version    0.1
+ * @version    0.2
  * @link       https://github.com/elionaimc/letbit-for-php
  * @uses Foundation Framework v5 (http://foundation.zurb.com/)
  *
@@ -200,10 +200,12 @@ HTML;
    * Loads the view file informed at param $file
    *
    * @param string $file relative URI of file will be loaded, e.g. 'views/index.php'
+   * @param array $params associative array of URL parameters
    * @return string
    */
-  public function render($file)
+  public function render($file, $params = null)
   {
+    $this->params = $params;
     ob_start();
     include $file;
     return ob_get_flush();

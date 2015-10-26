@@ -2,21 +2,18 @@
 /**
  * For PHP versions 5.4+
  *
- * Every single page is a instance of the Layout object, so you can access
- * all properties of layout model with $this-> clause
- *
  * @category   Framework
  * @author     Elionai Moura <eli.embits@gmail.com>
  * @copyright  2015 Design e Tecnologia by Elionai Moura <http://designetecnologia.com.br>
  * @license    The MIT license <https://opensource.org/licenses/MIT>
- * @version    0.2
+ * @version    0.1
  * @link       https://github.com/elionaimc/letbit-for-php
  *
  */
 
  //we can personalize a title attribute for each single page,
  // else a default, from definitions.php file, will be displayed
- $this->title = 'Initial Page :: ' . TITLE;
+ $this->title = 'ERROR Page :: ' . TITLE;
 
  //we add this css source to our header, showing we can use any resources for individual pages
  $this->headers = '<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">';
@@ -37,12 +34,23 @@
  //setModal params are: content, id attribute, class attribute, autoshow on load?
  //see the method definition for more info
  $this->setModal($modalContent, 'not-ready', 'medium', true);
-
- //include layout partials as simple
- include_once 'footer.html';
 ?>
 
  <!-- or just write the ´old but gold´ html embeded -->
+ <div class="row panel">
+   <h1>ERROR 404 Page!</h1>
+   <section class="small-10">
+     <p>Params:</p>
+     <p><?php  echo var_dump($this->params); ?></p>
+   </section>
+ </div>
+ <footer>
+   <p>
+     <a href="https://github.com/elionaimc/letbit-for-php" target="_blank">
+       Powered by LetBit! for PHP Framework
+     </a>
+   </p>
+ </footer>
  </div><!-- end of container div -->
 
 <?php

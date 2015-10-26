@@ -17,22 +17,19 @@ use app\main\models\Layout;
  * @author     Elionai Moura <eli.embits@gmail.com>
  * @copyright  2015 Design e Tecnologia by Elionai Moura <http://designetecnologia.com.br>
  * @license    The MIT license <https://opensource.org/licenses/MIT>
- * @version    0.1
+ * @version    0.2
  * @link       https://github.com/elionaimc/letbit-for-php
  *
  */
 class App extends Controller
 {
-  /**
-   * Overloads the lib/main/inception/Controller::__call function
-   * @see /designetecnologia/main/inception/Controller::__call()
-   */
-  public function __call($action, $vars)
+
+  public function __construct()
   {
-    /**
-     * Implements the abstract Controller::index() function
-     */
-    if (!is_callable($action)) $this->index(); // if called action do not exists, calls index()
+    //creates a new Layout object based at the /model/Layout
+    //so we can use the facilities of a template engine
+    $this->layout = new Layout();
+    parent::__construct();
   }
 
   /**
@@ -40,15 +37,20 @@ class App extends Controller
    */
   public function index()
   {
-    $router = Router::getInstance();
-    $params = $router->getParams();
-    $l = new Layout();
-    $result = $l->render(dirname(__FILE__).DS.'views/main.php');
+    //defines default file for index() and default actions
+    $result = $this->layout->render(dirname(__FILE__).DS.'views/main.php');
     $router->setBody($result);
   }
 
   public function notFound($msg = null)
   {
-    parent::notFound("Action failed. Performing App::index() action");
+    /*
+     * we can trigger a 404 error and render a 404 page OR
+     * outputs a flash message while redirecting for index page as below
+     * parent::notFound("Requisition failed. 404 ERROR!");
+     */
+    //defines default file for 404 ERROR page
+    $result = $this->layout->render(dirname(__FILE__).DS.'views/404.php', $this->params);
+    $router->setBody($result);
   }
 }

@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+body{
+    background:#1c94c4;
+    font-size:12px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#container footer{
+    background:#333;
+    position:absolute;
+    text-align:center;
+    font-weight:400;
+    padding:10px;
+    margin:0 auto;
+    bottom:0px;
+    width:100%;
+    min-height:45px;
+}
+
+#container footer p{
+    font-size:1rem;
+    padding:0;
+    margin:0;
+}
+
+#container footer p a{
+    color:#fefefe;
+    font-weight:bold;
+}

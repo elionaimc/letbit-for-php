@@ -1,0 +1,17 @@
+/* TEAM */
+    Developer: Elionai Moura
+    Contact: eli.embits@gmail.com
+    Twitter: @elionaimc
+    From: Natal, RN, Brazil
+
+/* THANKS */
+    Humanstxt.org Team
+    Foundation / Zurb Team foundation.zurb.com
+
+/* FRAMEWORK */
+    Version: 0.0.1, non-stable, alfa
+    Last update: 2015/10/25
+    Language: English
+    Doctype: HTML5
+    Tecnology: PHP, HTML5
+    Tools: Atom.io IDE, Git (and GitHub) Repository

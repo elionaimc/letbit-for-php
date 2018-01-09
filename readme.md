@@ -1,9 +1,9 @@
 **LetBit! For PHP Framework**
 ====
 
-A PHP Framework with some bits of elegance since beginning.
+This project was part of my studies in design patterns with PHP 5.3 and MUST not be used in production enviroment. You can download, fork or clone this and changes it as you wish, but NO MODIFICATION will be made since this LAST COMMIT. These set of files that I named a framework will rest in peace as project but will REMAINS here at github for historical purposes.
 
-Our goal is build a basic (batteries included) and modular framework using the most advanced techniques and with patterns of web development and concepts who will help the developer in your needs with non-intrusive lines of codes, templates and modules joinable for make all the jobs so rapid and easy as possible.
+Our goal WAS build a basic (batteries included) and modular framework using the most advanced techniques and with patterns of web development and concepts who will help the developer in your needs with non-intrusive lines of codes, templates and modules joinable for make all the jobs so rapid and easy as possible.
 
 To build it, we are using some free and open source projects like:
 
